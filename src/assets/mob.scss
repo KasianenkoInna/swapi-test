@@ -1,0 +1,121 @@
+
+@media only screen and (max-width: 1170px) {
+  .starship-item {
+    width: 200px;
+  }
+  .starship-item-wrapper {
+    height: calc(200px - 50px);
+  }
+}
+
+@media only screen and (max-width: 1060px) {
+  .starship-item {
+    width: 180px;
+  }
+  .starship-item-wrapper {
+    height: calc(180px - 50px);
+  }
+  .starship-item-mglt {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .starship-item {
+    width: 234px;
+  }
+  .starship-item-wrapper {
+    height: calc(234px - 50px);
+  }
+  .starship-item-mglt {
+    font-size: 24px;
+  }
+  .starship-item-name {
+    font-size: 45px;
+  }
+  .header-bord-text {
+    font-size: 100px;
+    right: 0px;
+  }
+}
+
+@media only screen and (max-width: 922px) {
+  .starship-item {
+    width: 180px;
+  }
+  .starship-item-wrapper {
+    height: calc(180px - 50px);
+  }
+  .starship-item-mglt {
+    font-size: 20px;
+  }
+  .promo-banner-footer img{
+    z-index: 0;
+  }
+  .contact-form-footer input, .confirm-contact-form-footer{
+    z-index: 2;
+  }
+}
+@media only screen and (max-width: 803px) {
+  .grid-attribut {
+    width: calc(100% / 2 - 100px);
+  }
+  .starship-item {
+    width: 234px;
+  }
+  .starship-item-wrapper {
+    height: calc(234px - 50px);
+  }
+  .starship-item-mglt {
+    font-size: 24px;
+  }
+  .starship-item-name {
+    font-size: 45px;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .wrap-star-intro{
+    flex-flow: column-reverse;
+  }
+  .star-intro{
+    width: 100%;
+  }
+  .home-content-wrapper{
+    display: block;
+  }
+  .filter-wrapper {
+    //width: 90%;
+  }
+  .header-bord-wrapper img {
+    top: 0;
+    left: calc(50% - 210px);
+  }
+  .header-bord-text {
+    font-size: 0px;
+  }
+  .filter-wrapper {
+    width: auto;
+  }
+  .content-table {
+    width: calc(100% - 35px);
+  }
+  .sort-btn-wrapper {
+    @include align-items(center);
+  }
+  .header-bord-wrapper img{
+
+  }
+}
+
+@media only screen and (max-width: 555px) {
+  .starship-item {
+    width: 100%;
+  }
+  .grid-attribut {
+    width: calc(100% - 60px);
+  }
+  .wrap-star-intro .starship-item-wrapper {
+    width: auto;
+  }
+}

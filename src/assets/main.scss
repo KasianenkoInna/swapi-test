@@ -1,0 +1,275 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+#app {
+  width: 100%;
+}
+.content-wrapper{
+  margin: 0 auto;
+  width: calc(100% - 30px);
+  padding: 0 15px;
+  max-width: 1300px;
+}
+.home-content-wrapper {
+  @include flexbox;
+  @include justify-content(space-between);
+  max-width: 1150px;
+  margin: 0 auto;
+
+}
+.content-table {
+  width: calc(100% - 330px);
+  margin: 0 35px;
+}
+
+.starships-table {
+  @include flexbox;
+  @include flex-wrap(wrap);
+  @include justify-content(space-between);
+}
+
+.starship-item {
+  width: 233px;
+  margin-bottom: 34px;
+  cursor: pointer;
+}
+
+.starship-item-wrapper {
+  @include flexbox;
+  @include flex-direction(column);
+  @include justify-content(flex-end);
+  height: calc(233px - 50px);
+  width: calc(100% - 50px);
+  background-color: $dark;
+  border-radius: 11px;
+  color: #fff;
+  font-family: 'Archivo Black', sans-serif;
+  text-transform: uppercase;
+  padding: 25px;
+}
+
+.starship-item:hover {
+  .starship-item-wrapper {
+    background-color: $blue;
+  }
+}
+
+.starship-item-name {
+  font-size: 45px;
+  line-height: 49px;
+}
+.starship-item-mglt {
+  font-size: 24px;
+  line-height: 26px;
+  margin-top: 4px;
+}
+
+.starship-item-full-name {
+  font-family: 'Courier Prime', monospace;
+  font-weight: bold;
+  font-size: 22px;
+  text-transform: capitalize;
+  margin-top: 24px;
+}
+
+.starship-item-content {
+  font-family: 'Courier Prime', monospace;
+  font-size: 18px;
+  margin: 16px 0;
+}
+
+.filter-wrapper {
+  padding: 10px 32px 54px;
+  border: 1px solid $light-grey;
+  border-radius: 3px;
+  height: fit-content;
+  width: 300px;
+}
+
+.filter-title {
+  @include flexbox;
+  @include align-items(center);
+  @include justify-content(space-between);
+  margin-bottom: 32px;
+  margin-top: 44px;
+}
+
+.filter-title-name {
+  font-family: Archivo Black;
+  font-size: 22px;
+  line-height: 24px;
+  text-transform: capitalize;
+}
+
+.filter-title-count {
+  font-family: Archivo;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 13px;
+  text-align: right;
+  text-transform: capitalize;
+  color: $blue;
+}
+
+.show-hide-btn {
+  font-family: 'Courier Prime', monospace;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: capitalize;
+  color: $blue;
+  margin-top: 24px;
+  cursor: pointer;
+}
+
+.filter-pilot-wrapper {
+  @include flexbox;
+  @include align-items(center);
+  cursor: pointer;
+  input {
+    height: 22px;
+    width: 22px;
+    border: 1px solid #000000;
+    border-radius: 3px;
+  }
+}
+
+.filter-pilot-name {
+  font-family: 'Courier Prime', monospace;
+  font-size: 18px;
+  line-height: 36px;
+  margin-left: 18px;
+}
+
+.filter-range-wrapper {
+  @include flexbox;
+  @include align-items(center);
+  @include justify-content(space-between);
+
+  input {
+    width: 70px;
+    height: 17px;
+    border: 1px solid #CCCCCC;
+    border-radius: 3px;
+    padding: 5px;
+  }
+}
+
+.sort-btn-wrapper {
+  @include flexbox;
+  @include justify-content(flex-end);
+  width: 100%;
+  height: 108px;
+  position: relative;
+}
+
+
+.select-sort-btn {
+  @include flexbox;
+  @include align-items(center);
+  font-family: 'Courier Prime', monospace;
+  height: 58px;
+  background-color: $dark;
+  border-radius: 3px;
+  color: #fff;
+  padding: 0 18px;
+  text-transform: uppercase;
+  width: 230px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.select-sort-options {
+  font-size: 16px;
+  line-height: 40px;
+  padding: 23px 18px;
+  cursor: pointer;
+  font-family: 'Courier Prime', monospace;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: $dark;
+  border-radius: 3px;
+  margin-top: 2px;
+    div:hover{
+      color: grey;
+    }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.view-more-page-btn {
+  @include flexbox;
+  @include align-items(center);
+  @include justify-content(center);
+
+  width: 238px;
+  height: 58px;
+  background-color: $dark;
+  border-radius: 3px;
+  font-family: 'Courier Prime', monospace;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #fff;
+  cursor: pointer;
+  margin: 0 auto;
+  position: relative;
+
+  img {
+    margin-left: 20px;
+  }
+}
+
+.promo-banner-footer {
+  height: 497px;
+  position: relative;
+  background: $blue;
+  border-radius: 20px;
+  margin-top: 160px;
+
+  img {
+    position: absolute;
+    top: calc(50% - 300px);
+    right: 50px;
+    //width: 60%;
+  }
+}
+
+.contact-form-footer {
+  @include flexbox;
+  @include flex-wrap(wrap);
+  padding: 100px 0 86px 86px;
+  width: 40%;
+
+  input {
+    width: 100%;
+    height: 84px;
+    border-color: transparent;
+    margin-bottom: 32px;
+    padding: 0 38px;
+    font-family: Archivo Black;
+    font-size: 16px;
+  }
+}
+
+.confirm-contact-form-footer {
+  @include flexbox;
+  @include align-items(center);
+  @include justify-content(center);
+  height: 84px;
+  font-family: Archivo Black;
+  font-size: 16px;
+  color: #fff;
+  background-color: $dark;
+  width: 100%;
+}
+
+
+
+
+
+
+
