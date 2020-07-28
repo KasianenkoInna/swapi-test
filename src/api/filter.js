@@ -33,7 +33,16 @@ export const filter = {
 
     getSortedStarships: (starships, sortBy = 'MGLT') => {
         let sortKey = sortHelper[sortBy];
-        return starships.sort((a, b) =>  b[sortKey] - a[sortKey]);
+        let nanValueStarships = [];
+        let normalStarships = starships.filter(starship => {
+            if(isNaN(starship[sortKey])) {
+                nanValueStarships.push(starship);
+                return false;
+            }
+            return true;
+        });
+        let sorted = normalStarships.sort((a, b) =>  a[sortKey] - b[sortKey]);
+        return [...sorted, ...nanValueStarships]
     },
 
     getPaginationStarship: (starship, page = 1) => {

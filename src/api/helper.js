@@ -83,7 +83,7 @@ export const helper = {
             return parseInt(value.replace(/,/g, ''));
         }
 
-        return isNaN(parseInt(value)) ? 0 : parseInt(value);
+        return parseInt(value) ;
     },
 
     normalizeMaxMinRange:(query, minR, maxR) => {

@@ -79,22 +79,26 @@ export default {
         },
         maxCrew(state) {
             return state.allStarships.reduce((a, currentStarship) => {
-                return a > currentStarship.normalizedCrew ? a: currentStarship.normalizedCrew;
+                let crew =  (isNaN(currentStarship.normalizedCrew)) ? 0 : currentStarship.normalizedCrew;
+                return a > crew ? a: crew;
             }, 0);
         },
         minCrew(state) {
             return state.allStarships.reduce((a, currentStarship) => {
-                return a < currentStarship.normalizedCrew ? a: currentStarship.normalizedCrew;
+                let crew =  (isNaN(currentStarship.normalizedCrew)) ? 0 : currentStarship.normalizedCrew;
+                return a < crew ? a: crew;
             }, 0);
         },
         maxPsngs(state) {
              return state.allStarships.reduce((a, currentStarship) => {
-                return a > currentStarship.normalizedPassengers ? a: currentStarship.normalizedPassengers;
+                 let psngs =  (isNaN(currentStarship.normalizedPassengers)) ? 0 : currentStarship.normalizedPassengers;
+                return a > psngs ? a: psngs;
             }, 0);
         },
         minPsngs(state) {
             return state.allStarships.reduce((a, currentStarship) => {
-                return a < currentStarship.normalizedPassengers ? a: currentStarship.normalizedPassengers;
+                let psngs =  (isNaN(currentStarship.normalizedPassengers)) ? 0 : currentStarship.normalizedPassengers;
+                return a < psngs ? a: psngs;
             }, 0);
         }
     }
